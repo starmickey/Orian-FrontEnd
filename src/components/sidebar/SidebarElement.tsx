@@ -12,31 +12,35 @@ interface SidebarElementProps {
   selected?: boolean;
 }
 
-function SidebarElement(
-  { icon, label, href, className = "", collapsed = false, selected = false } : SidebarElementProps
+function SidebarElement({
+  icon,
+  label,
+  href,
+  className = "",
+  collapsed = false,
+  selected = false
+} : SidebarElementProps
 ){
   return (
     <Link
       href={href}
       className={clsx(
-        "relative flex items-center px-2 py-1 gap-4 rounded-md",
-        "text-lila",
-        "hover:text-purple hover:bg-transparent-white",
-        "active:text-purple",
+        "relative flex items-center px-2 py-1 gap-4",
+        " hover:bg-transparent-white-10",
         className,
         {
-          "text-purple" : selected
+          "text-purple-60" : selected,
+          "text-purple-gray-40 hover:text-purple-60 active:text-purple-60" : !selected,
         }
       )}
     >
 
       {/* Half circle */}
-      <div className={clsx(
-        "absolute left-[-5px]",
-        { "hidden" : !selected}
-      )}>
-        <HalfCircle size={10}/>
-      </div>
+      {selected && (
+        <div className="absolute left-[-5px]">
+          <HalfCircle size={10} />
+        </div>
+      )}
 
       {/* Icon */}
       <div className={clsx(
@@ -49,12 +53,11 @@ function SidebarElement(
       </div>
 
       {/* Label */}
-      <div className={clsx(
-        "text-sm font-medium pt-[0.1rem] w-full",
-        {"hidden" : collapsed}
-      )}>
-        {label}
-      </div>
+      {!collapsed && (
+        <div className="text-sm font-medium pt-[0.1rem] w-full">
+          {label}
+        </div>
+      )}
     </Link>
   )
 }

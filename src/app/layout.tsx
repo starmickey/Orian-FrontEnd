@@ -1,6 +1,6 @@
-import "./globals.css";
+import Sidebar from "@/components/sidebar/Sidebar";
 import { anek_bangla } from "@/app/fonts";
-import Sidebar from "@/components/common/Sidebar";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -11,7 +11,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${anek_bangla.className} flex`}>
         <Sidebar/>
-        {children}
+        <div className="bg-indigo-90 w-full px-6 text-purple-gray-40">
+          {children}
+        </div>
       </body>
     </html>
   );
