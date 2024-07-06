@@ -17,7 +17,7 @@ export default function Sidebar() {
     <aside className="flex sticky">
       <nav
         className={clsx(
-          "bg-indigo-100 h-screen text-white pt-7",
+          "bg-indigo-100 h-screen pt-7",
           { "w-56": !collapsed, "w-12": collapsed }
         )}
       >
