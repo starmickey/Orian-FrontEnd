@@ -1,0 +1,6 @@
+.purple-radial-shadow {
+  background: radial-gradient(circle,
+      rgba(128, 0, 128, 0) 0%,
+      rgb(173 141 247 / 18%) 25%,
+      rgba(128, 0, 128, 0) 70%);
+}

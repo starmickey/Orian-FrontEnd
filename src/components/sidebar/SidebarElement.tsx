@@ -19,8 +19,8 @@ function SidebarElement({
   className = "",
   collapsed = false,
   selected = false
-} : SidebarElementProps
-){
+}: SidebarElementProps
+) {
   return (
     <Link
       href={href}
@@ -29,16 +29,17 @@ function SidebarElement({
         " hover:bg-transparent-white-10",
         className,
         {
-          "text-purple-60" : selected,
-          "text-purple-gray-40 hover:text-purple-60 active:text-purple-60" : !selected,
+          "text-purple-60": selected,
+          "text-purple-gray-40 hover:text-purple-60 active:text-purple-60": !selected,
         }
       )}
     >
 
       {/* Half circle */}
       {selected && (
-        <div className="absolute left-[-5px]">
-          <HalfCircle size={10} />
+        <div className="flex absolute left-[-15px] w-[30px] h-[30px] items-center justify-center">
+          <HalfCircle size={10} className="relative z-10" />
+          <div className="absolute inset-0 purple-radial-shadow"></div>
         </div>
       )}
 
@@ -46,8 +47,8 @@ function SidebarElement({
       <div className={clsx(
         "flex items-center justify-center",
         {
-          "w-4 flex-shrink-0" : !collapsed,
-          "w-full justify-start" : collapsed
+          "w-4 flex-shrink-0": !collapsed,
+          "w-full justify-start": collapsed
         })}>
         {icon}
       </div>

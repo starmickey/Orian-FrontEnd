@@ -1,44 +1,40 @@
-import { RiWallet2Fill as WalletIcon } from "react-icons/ri";
-import { PiPaperPlaneTiltFill as PaperPlaneIcon} from "react-icons/pi";
-import { LuTestTube as TubeIcon } from "react-icons/lu";
-import { RiUser3Fill as UserIcon } from "react-icons/ri";
 import { Icon } from '@iconify/react';
 
 const sidebarElements = [
   {
     label: "Inicio",
     icon: <Icon icon="fa6-solid:house" />,
-    href: "/",
+    path: "/",
   },
   {
     label: "Carteras",
-    icon:<WalletIcon />,
-    href: "/carteras",
+    icon: <Icon icon="ri:wallet-2-fill" />,
+    path: "/carteras",
   },
   {
     label: "Noticias",
-    icon: <PaperPlaneIcon />,
-    href: "/",
+    icon: <Icon icon="f7:paperplane-fill" />,
+    path: "/noticias",
   },
   {
     label: "Mercados",
     icon: <Icon icon="iconoir:coin" />,
-    href: "/",
+    path: "/mercados",
   },
   {
     label: "Estrategias",
     icon: <Icon icon="ph:strategy-fill" />,
-    href: "/",
+    path: "/estrategias",
   },
   {
     label: "Simulador",
-    icon: <TubeIcon />,
-    href: "/",
+    icon:<Icon icon="icon-park-outline:experiment-one" />,
+    path: "/simulador",
   },
   {
     label: "Cuenta",
-    icon: <UserIcon />,
-    href: "/",
+    icon: <Icon icon="ri:user-3-fill" />,
+    path: "/cuenta",
   },
 ];
 
