@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
 import { Icon } from '@iconify/react';
-import { priceChangeEnum } from "./mock-assets";
 
-interface assetCardProps {
+interface AssetCardProps {
   icon: ReactNode;
   shortname: string;
   priceChangeDirection: 'increased' | 'decreased';
@@ -21,7 +20,7 @@ export default function AssetCard({
   priceGrowthInCents,
   color,
   style = 'outline',
-}: assetCardProps): ReactNode {
+}: AssetCardProps): ReactNode {
   return (
     <div
     className={clsx(
@@ -64,8 +63,8 @@ export default function AssetCard({
               width={10}
               height={10}
               className={clsx('mt-1', {
-                "-rotate-45": priceChangeDirection === priceChangeEnum.INCREASED,
-                "rotate-45": priceChangeDirection === priceChangeEnum.DECREASED,
+                "-rotate-45": 'increased',
+                "rotate-45": 'decreased',
               })}
             />
             <div className='text-sm'>
