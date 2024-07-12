@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { Icon } from '@iconify/react';
 import Logo from "../icons/Logo";
@@ -11,11 +11,34 @@ import { usePathname } from 'next/navigation';
 import './sidebar.css';
 
 export default function Sidebar() {
+  // True if the sidebar is collapsed
   const [collapsed, setCollapsed] = useState(false);
+  // True if the user pinned the sidebar for it to keep always expanded
+  const [fixExpand, setFixExpand] = useState(true);
+  // True if the mouse is over the sidebar
+  const [mouseOver, setMouseOver] = useState(false);
   const pathname = usePathname();
 
+  const handleCollapseButtonClick = () => {
+    setCollapsed(!collapsed);
+    setFixExpand(!fixExpand);
+  }
+
+  // Expanding on hover effect
+  useEffect(() => {
+    const startState = mouseOver;
+    setTimeout(() => {
+      if (mouseOver === startState && !fixExpand) {
+        setCollapsed(!mouseOver);
+      }
+    }, 300)
+  }, [mouseOver]);
+
   return (
-    <aside className="flex sticky">
+    <aside className="flex sticky"
+      onMouseEnter={() => setMouseOver(true)}
+      onMouseLeave={() => setMouseOver(false)}
+    >
       <nav
         className={clsx(
           "bg-indigo-100 h-screen pt-7",
@@ -62,8 +85,7 @@ export default function Sidebar() {
         )}>
           <Icon icon="material-symbols:keyboard-arrow-right"
             className={clsx("text-gray", { "rotate-180": collapsed })}
-            onClick={() => setCollapsed(!collapsed)}
-            onMouseOver={() => setCollapsed(false)}
+            onClick={handleCollapseButtonClick}
           />
         </div>
       </nav>
