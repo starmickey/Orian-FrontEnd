@@ -13,11 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${anek_bangla.className} flex`}>
-        <Sidebar />
-        <div className="bg-indigo-90 w-full px-6 text-purple-gray-40">
+      <body className={`${anek_bangla.className} flex bg-indigo-90 text-purple-gray-40`}>
           {children}
-        </div>
       </body>
     </html>
   );

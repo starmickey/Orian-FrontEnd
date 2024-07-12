@@ -4,37 +4,37 @@ const sidebarElements = [
   {
     label: "Inicio",
     icon: <Icon icon="fa6-solid:house" />,
-    path: "/",
+    path: "/dashboard",
   },
   {
     label: "Carteras",
     icon: <Icon icon="ri:wallet-2-fill" />,
-    path: "/carteras",
+    path: "/dashboard/carteras",
   },
   {
     label: "Noticias",
     icon: <Icon icon="f7:paperplane-fill" />,
-    path: "/noticias",
+    path: "/dashboard/noticias",
   },
   {
     label: "Mercados",
     icon: <Icon icon="iconoir:coin" />,
-    path: "/mercados",
+    path: "/dashboard/mercados",
   },
   {
     label: "Estrategias",
     icon: <Icon icon="ph:strategy-fill" />,
-    path: "/estrategias",
+    path: "/dashboard/estrategias",
   },
   {
     label: "Simulador",
     icon:<Icon icon="icon-park-outline:experiment-one" />,
-    path: "/simulador",
+    path: "/dashboard/simulador",
   },
   {
     label: "Cuenta",
     icon: <Icon icon="ri:user-3-fill" />,
-    path: "/cuenta",
+    path: "/dashboard/cuenta",
   },
 ];
 

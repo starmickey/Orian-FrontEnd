@@ -14,7 +14,11 @@ const config: Config = {
 
       'purple-gray-20': '#E3DDF3',
       'purple-gray-40': '#B1AFCD',
-      'purple-gray-90': '#5B5A99',
+      'purple-gray-83': '#535175',
+      'purple-gray-85': '#454261',
+
+      'blue-gray-80': '#5B5A99',
+      'blue-gray-90': '#312F62',
 
       'gray-20': '#EAEAEA',
       'gray-30': '#DEDEDE',
@@ -24,13 +28,19 @@ const config: Config = {
       'indigo-85': '#1E1851',
       'indigo-90': '#171339',
       'indigo-100': '#100D28',
-
-      'transparent-white-10': '#FFFFFF0F',
-      'transparent-purple-20': '#6F6C992A',
-
+      
       'cherry': '#FF3737',
       'gold': '#F6921A',
       'green': '#2F9264',
+
+      'white': '#FFFFFF',
+
+      'transparent-white-5': '#FFFFFF07',
+      'transparent-white-10': '#FFFFFF0F',
+      'transparent-white-50': '#FFFFFF7F',
+
+      'transparent-purple-20': '#6F6C992A',
+
     },
     // fontSize: {
     //   sm: '0.8rem',
